@@ -17,9 +17,7 @@ public class ConnectionManager {
     }
 
     public static Connection get() throws SQLException {
-
         try {
-            System.out.println("Получено соединение");
             return DATA_SOURCE.getConnection();
         } catch (SQLException e) {
             throw new RuntimeException(e);
