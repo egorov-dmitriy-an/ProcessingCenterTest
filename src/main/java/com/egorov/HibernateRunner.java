@@ -17,7 +17,7 @@ public class HibernateRunner {
             session.beginTransaction();
 
             CardStatus cardStatus = CardStatus.builder()
-                    .id(2L)
+                    .id(1L)
                     .cardStatusName("Card is valid.")
                     .build();
 

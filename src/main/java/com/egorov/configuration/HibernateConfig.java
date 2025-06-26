@@ -1,6 +1,7 @@
 package com.egorov.configuration;
 
 import com.egorov.model.*;
+import lombok.Getter;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -9,7 +10,7 @@ import java.util.Properties;
 
 
 public class HibernateConfig {
-
+    @Getter
     private static final SessionFactory sessionFactory = buildSessionFactory();
 
     private static SessionFactory buildSessionFactory() {
@@ -36,9 +37,9 @@ public class HibernateConfig {
         }
     }
 
-    public static SessionFactory getSessionFactory() {
-        return sessionFactory;
-    }
+//    public static SessionFactory getSessionFactory() {
+//        return sessionFactory;
+//    }
 
     private static Properties loadHibernateProperties() {
         Properties properties = new Properties();
