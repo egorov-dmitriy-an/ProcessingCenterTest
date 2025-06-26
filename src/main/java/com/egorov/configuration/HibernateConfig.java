@@ -37,10 +37,6 @@ public class HibernateConfig {
         }
     }
 
-//    public static SessionFactory getSessionFactory() {
-//        return sessionFactory;
-//    }
-
     private static Properties loadHibernateProperties() {
         Properties properties = new Properties();
         try (InputStream input = HibernateConfig.class.getClassLoader().getResourceAsStream("hibernate.properties")) {
@@ -53,11 +49,10 @@ public class HibernateConfig {
             throw new RuntimeException(e);
         }
     }
-
-
-    public static void shutdown() {
-        if (sessionFactory != null && !sessionFactory.isClosed()) {
-            sessionFactory.close();
-        }
-    }
+//
+//    public static void shutdown() {
+//        if (sessionFactory != null && !sessionFactory.isClosed()) {
+//            sessionFactory.close();
+//        }
+//    }
 }
