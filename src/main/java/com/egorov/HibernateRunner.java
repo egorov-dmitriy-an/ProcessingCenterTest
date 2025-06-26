@@ -137,13 +137,13 @@ public class HibernateRunner {
                     .sentToIssuingBank(LocalDateTime.of(2022, 10, 21, 15, 27, 8, 271))
                     .build();
 
+
             session.persist(card1);
             session.persist(card2);
             session.persist(card3);
             session.persist(card4);
 
             session.getTransaction().commit();
-
         }
     }
 }
