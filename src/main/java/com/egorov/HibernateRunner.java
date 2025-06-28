@@ -15,10 +15,7 @@ public class HibernateRunner {
              Session session = sessionFactory.openSession()) {
 
             System.out.println(sessionFactory);
-            System.out.println("___________");
-
             session.beginTransaction();
-
             //        Создадим статусы карт
             CardStatus cardStatus = CardStatus.builder()
                     .cardStatusName("Card is valid.")
@@ -28,7 +25,7 @@ public class HibernateRunner {
                     .cardStatusName("Card is lost.")
                     .build();
             session.persist(cardStatus);
-            session.persist(cardStatus2);
+            session.persist(cardStatus2);//
 
             //        Создадим платежные системы
             PaymentSystem paymentSystem = PaymentSystem.builder()
@@ -136,7 +133,6 @@ public class HibernateRunner {
                     .receivedFromIssuingBank(LocalDateTime.of(2022, 10, 21, 15, 26, 6, 175))
                     .sentToIssuingBank(LocalDateTime.of(2022, 10, 21, 15, 27, 8, 271))
                     .build();
-
 
             session.persist(card1);
             session.persist(card2);
