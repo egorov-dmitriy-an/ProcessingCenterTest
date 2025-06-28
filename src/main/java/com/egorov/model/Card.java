@@ -29,4 +29,6 @@ public class Card {
     private Account accountId;
     private LocalDateTime receivedFromIssuingBank;
     private LocalDateTime sentToIssuingBank;
+
+
 }
