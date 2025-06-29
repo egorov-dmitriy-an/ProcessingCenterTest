@@ -13,7 +13,7 @@ public class TransactionType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "transactiont_type_name")
+    @Column(name = "transaction_type_name")
     private String transactionTypeName;
     @Column(name = "operator")
     private String operator;

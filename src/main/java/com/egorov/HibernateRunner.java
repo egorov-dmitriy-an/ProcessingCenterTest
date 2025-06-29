@@ -13,9 +13,8 @@ public class HibernateRunner {
     public static void main(String[] args) {
         try (SessionFactory sessionFactory = HibernateConfig.getSessionFactory();
              Session session = sessionFactory.openSession()) {
-
-            System.out.println(sessionFactory);
             session.beginTransaction();
+
             //        Создадим статусы карт
             CardStatus cardStatus = CardStatus.builder()
                     .cardStatusName("Card is valid.")

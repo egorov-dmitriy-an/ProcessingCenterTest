@@ -39,7 +39,8 @@ public class HibernateConfig {
 
     private static Properties loadHibernateProperties() {
         Properties properties = new Properties();
-        try (InputStream input = HibernateConfig.class.getClassLoader().getResourceAsStream("hibernate.properties")) {
+        try (InputStream input = HibernateConfig.class.getClassLoader()
+                .getResourceAsStream("hibernate.properties")) {
             if (input == null) {
                 throw new RuntimeException();
             }
